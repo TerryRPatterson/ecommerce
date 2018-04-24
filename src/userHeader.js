@@ -4,10 +4,15 @@ import "./header.css";
 import React from "react";
 //eslint-disable-next-line
 import Cart from "./cart";
+import Product from "./productDisplay";
+import CategoryList from "./categoryList";
+import testData from "./testData";
 
 let header = ({cart, currentUser}) => {
     return (
+        <main>
         <header className="siteHeader">
+
             <div>
                 <img src="Icon.png" className="logo" alt={"Light Brown Guinea Pig."+
                 "The site logo"}/>
@@ -18,6 +23,9 @@ let header = ({cart, currentUser}) => {
                 <Cart numberOfItems={cart.length}/>
             </div>
         </header>
+        <Product price="12.99" category="Shirt" name="Black Shirt" id="10"/>
+        <CategoryList {...testData}/>
+    </main>
     );
 };
 
