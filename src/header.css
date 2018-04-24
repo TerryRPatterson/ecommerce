@@ -1,0 +1,21 @@
+.siteHeader {
+    align-items: center;
+    display: flex;
+    height: 5%;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #14441c;
+    color: white;
+}
+.subHeader {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+.icon {
+    max-height: 50px;
+}
+
+.logo {
+    max-height: 200px;
+}
