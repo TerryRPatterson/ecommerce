@@ -1,8 +1,19 @@
 import React from "react";
 import Placeholder from "./placeHolder";
+import {Link} from "react-router-dom";
+import {connect} from "react-redux";
+
 const defaultDescription = "The vendor has not set a description yet 🙁";
 const defaultPrice = "Not for sale";
-let product = ({category, price=defaultPrice, name, id, min=0, max=100,
+
+let mapStateToProps = ({categories},{categoryId}) => {
+    return {categoryName:categories.find( ({id}) => {
+        return (id === categoryId);
+    })["name"]};
+
+};
+
+let product = ({categoryName,categoryId, price=defaultPrice, name, id, min=0, max=100,
     description=defaultDescription, available=true}) => {
     if (price === defaultPrice) {
         available=false
@@ -14,7 +25,8 @@ let product = ({category, price=defaultPrice, name, id, min=0, max=100,
     return (
         <article>
             <header>
-                {category} => {name}
+                <Link to={`/categories/${categoryId}`}>
+                    {categoryName} => {name}</Link>
             </header>
             <section>
                 <Placeholder text="Image Gallery"/>
@@ -34,4 +46,5 @@ let product = ({category, price=defaultPrice, name, id, min=0, max=100,
     );
 };
 
-export default product;
+let productConnected = connect(mapStateToProps)(product);
+export default productConnected;

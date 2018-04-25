@@ -1,6 +1,11 @@
 import React from "react";
-import CategoryDisplay from "./categoryDisplay";
-
+import {connect} from "react-redux";
+import {categoryDisplay as CategoryDisplay} from "./categoryDisplay";
+let mapStateToProps = ({categories, products}) => {
+    return {
+        categories,products
+    }
+};
 let categoriesPage = ({categories, products}) => {
     let vDomList = categories.map( (category) => {
         return <CategoryDisplay key={category["id"]} category={category}
@@ -9,4 +14,7 @@ let categoriesPage = ({categories, products}) => {
     return <section>{vDomList}</section>;
 };
 
-export default categoriesPage;
+let categoriesPageConnected = connect(mapStateToProps)(categoriesPage);
+
+export {categoriesPage};
+export default categoriesPageConnected;

@@ -15,7 +15,7 @@ let categoryList = ({categories, products}) => {
         categoriesVDom.push(
             <li key={category["id"]}><Link to={`/categories/${id}`}
                 key={category["id"]}>
-                {`${category["name"]} (${count})`}</Link></li>);
+                {`${name} (${count})`}</Link></li>);
     });
     return (
         <ul>

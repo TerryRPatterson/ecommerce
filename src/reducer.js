@@ -8,8 +8,7 @@ let router = {
 
 let initalState = {
     cart:[
-        { "id": 1, "name": "Coffee Maker", "categoryId": 2 },
-        { "id": 2, "name": "Redux Help", "categoryId": 3 }
+        {id:1,quantity:1},{id:2,quantity:3}
     ],
     users:[
         { "id": 1, "name": "Terry" },
@@ -18,10 +17,10 @@ let initalState = {
         { "id": 4, "name": "Werewolf", "categoryId": 4 }
     ],
     products:[
-        { "id": 1, "name": "Coffee Maker", "categoryId": 2 },
-        { "id": 2, "name": "Redux Help", "categoryId": 3 },
-        { "id": 3, "name": "Super Amazing Computer", "categoryId": 1 },
-        { "id": 4, "name": "Werewolf", "categoryId": 4 }
+        { "id": 1, "name": "Coffee Maker", "categoryId": 2, price:10 },
+        { "id": 2, "name": "Redux Help", "categoryId": 3 , price:10},
+        { "id": 3, "name": "Super Amazing Computer", "categoryId": 1, price:10 },
+        { "id": 4, "name": "Werewolf", "categoryId": 4 , price:10}
     ],
     categories:[
         { "id": 1, "name": "Technology" },
