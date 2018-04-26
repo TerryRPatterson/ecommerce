@@ -1,5 +1,8 @@
+/*eslint-disable no-unused-vars*/
+//They are used in jsx
 import React from "react";
 import {Link} from "react-router-dom";
+/*eslint-enable no-unused-vars*/
 
 let categoryList = ({categories, products}) => {
     let categoriesVDom = [];

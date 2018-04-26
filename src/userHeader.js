@@ -1,13 +1,12 @@
 import "./header.css";
-
-//eslint-disable-next-line
+/*eslint-disable no-unused-vars*/
+//They are used in jsx
 import React from "react";
-//eslint-disable-next-line
-import Cart from "./cart";
+import LogIn from "./LogIn";
+/*eslint-enable no-unused-vars*/
 
 
-
-let header = ({cart, currentUser}) => {
+let header = () => {
     return (
         <header className="siteHeader">
 
@@ -17,8 +16,8 @@ let header = ({cart, currentUser}) => {
         Digital Crafts
             </div>
             <div className="subHeader">
-                <p>Logged In As:{currentUser["name"]}</p>
-                <Cart numberOfItems={cart.length}/>
+
+                <LogIn/>
             </div>
         </header>
     );

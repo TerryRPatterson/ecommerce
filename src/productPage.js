@@ -1,14 +1,16 @@
+/*eslint-disable no-unused-vars*/
+//They are used in jsx
 import React from "react";
-
 import ProductDisplay from "./productDisplay";
 import CategoryList from "./categoryList";
+/*eslint-enable no-unused-vars*/
 import {connect} from "react-redux";
 
 let mapStateToProps = ({products, categories},props) => {
     let id = props["match"]["params"]["id"];
     let product = products.find(
         ({id:Pid}) => {
-            return (Pid.toString() === id)
+            return (Pid.toString() === id);
         });
     return {
         products,

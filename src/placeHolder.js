@@ -1,4 +1,7 @@
+/*eslint-disable no-unused-vars*/
+//They are used in jsx
 import React from "react";
+/*eslint-enable no-unused-vars*/
 
 let placeholder = ({text}) => {
     return (

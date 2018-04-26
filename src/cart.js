@@ -1,4 +1,7 @@
+/*eslint-disable no-unused-vars*/
+//They are used in jsx
 import React from "react";
+/*eslint-enable no-unused-vars*/
 /*Function that returns a cart svg with a dynacmic number of numberOfItems
 Expectes an object containing numberOfItems */
 

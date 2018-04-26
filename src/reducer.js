@@ -1,20 +1,14 @@
-
+import cartReducer from "./cartReducer";
 let router = {
-    "/fetch":null,
-    "/cart":null,
-    "/login":null,
+    "fetch/":null,
+    "cart/":cartReducer,
+    "login/":null,
     "@@INIT":state => state
-}
+};
 
 let initalState = {
     cart:[
         {id:1,quantity:1},{id:2,quantity:3}
-    ],
-    users:[
-        { "id": 1, "name": "Terry" },
-        { "id": 2, "name": "Redux Help", "categoryId": 3 },
-        { "id": 3, "name": "Super Amazing Computer", "categoryId": 1 },
-        { "id": 4, "name": "Werewolf", "categoryId": 4 }
     ],
     products:[
         { "id": 1, "name": "Coffee Maker", "categoryId": 2, price:10 },
@@ -36,8 +30,8 @@ let reducer = (oldState=initalState, action) => {
         if (type.startsWith(route)){
             return router[route](oldState,action);
         }
-    };
+    }
     throw new Error(`Action ${type} not found.`);
-}
+};
 
 export default reducer;

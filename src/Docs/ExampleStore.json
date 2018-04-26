@@ -1,0 +1,35 @@
+{
+    "products":
+    [
+        {
+            "id":"UUID V4",
+            "name":"Text",
+            "categoryId":"UUID V4",
+            "price":"Text",
+
+        },
+        {"....."}
+    ],
+    "categories":
+    [
+        {
+            "id":"UUID V4",
+            "name":"Text"
+        },
+        {"...."}
+    ],
+    "currentUser":
+    {
+        "name":"Text",
+        "jwt":"Vaild JWT"
+    },
+    "cart":
+    [
+        {
+            "id":"UUID V4",
+            "quantity":"Number",
+            "pending_quantity_add":"Number",
+            "pending_quantity_remove":"Number"
+        }
+    ]
+}

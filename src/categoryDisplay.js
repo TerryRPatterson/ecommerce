@@ -1,7 +1,10 @@
+/*eslint-disable no-unused-vars*/
+//They are used in jsx
 import React from "react";
 import Placeholder from "./placeHolder";
-import {connect} from "react-redux";
 import {Link} from "react-router-dom";
+import {connect} from "react-redux";
+/*eslint-enable no-unused-vars*/
 
 let mapStateToProps = ({categories, products},{match:{params:{id}}}) => {
     let category = categories.find(({id:Cid}) => {
