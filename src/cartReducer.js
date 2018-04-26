@@ -39,8 +39,8 @@ let cartReducer = (oldState, action) => {
     return routes[type](oldState,action);
 };
 
-let isPositive = (number) =>
+let isPositive = (number) => {
     return (Math.sign(number) === 1);
-
+}
 
 export default cartReducer;
