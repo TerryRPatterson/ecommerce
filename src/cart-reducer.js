@@ -28,10 +28,19 @@ let changeCart = (oldState, action) => {
     return(newState);
 };
 
+let removeFromCart = (oldState, action) => {
+    let cart = clone(oldState["cart"]);
+    let productId = action["id"];
+    let productIndex = cart.find( ({id}) => id === productId);
+    cart[productIndex]["status"] = "pending removal";
+    let newState = {...oldState, cart};
+    return newState;
+};
+
 let routes = {
     "add":addToCart,
-    "change":null,
-    "remove":null
+    "change":changeCart,
+    "remove":removeFromCart
 };
 
 let cartReducer = (oldState, action) => {

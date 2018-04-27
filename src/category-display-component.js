@@ -1,7 +1,7 @@
 /*eslint-disable no-unused-vars*/
 //They are used in jsx
 import React from "react";
-import Placeholder from "./placeHolder";
+import Placeholder from "./place-holder-component";
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 /*eslint-enable no-unused-vars*/

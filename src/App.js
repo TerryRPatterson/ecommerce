@@ -1,17 +1,17 @@
 
 import "./App.css";
-import testData from "./testData";
 import {createStore} from "redux";
 /*eslint-disable no-unused-vars*/
 //They are used in jsx
-import ProductPage from "./productPage";
-import CategoriesPage from "./categoriesPage";
+import ProductPage from "./product-page-component";
+import CategoriesPage from "./categories-page-component";
 import reducer from "./reducer";
-import CategoryDisplay from "./categoryDisplay";
+import CategoryDisplay from "./category-display-component";
 import React from "react";
-import SiteHeader from "./userHeader";
+import SiteHeader from "./header-component";
 import {HashRouter as Router, Route } from "react-router-dom";
 import {Provider} from "react-redux";
+import LoginPage from "./login-page-component";
 /*eslint-enable no-unused-vars*/
 
 let store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ &&
@@ -22,12 +22,12 @@ let App = () =>  {
         <Router>
             <Provider store={store}>
                 <div>
-                    <SiteHeader cart={testData["cart"]}
-                        currentUser={testData["currentUser"]}/>
+                    <SiteHeader/>
                     <Route exact path="/(home)?" component={CategoriesPage}/>
                     <Route path="/products/:id" component={ProductPage}/>
                     <Route path="/categories/:id"
                         component={CategoryDisplay}/>
+                    <Route path="/login" component={LoginPage}/>
                 </div>
             </Provider>
         </Router>

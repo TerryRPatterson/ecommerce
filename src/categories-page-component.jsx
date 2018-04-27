@@ -2,7 +2,7 @@ import {connect} from "react-redux";
 /*eslint-disable no-unused-vars*/
 //They are used in jsx
 import React from "react";
-import {categoryDisplay as CategoryDisplay} from "./categoryDisplay";
+import {categoryDisplay as CategoryDisplay} from "./category-display-component";
 /*eslint-enable no-unused-vars*/
 
 let mapStateToProps = ({categories, products}) => {

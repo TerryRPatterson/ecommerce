@@ -1,8 +1,8 @@
 /*eslint-disable no-unused-vars*/
 //They are used in jsx
 import React from "react";
-import ProductDisplay from "./productDisplay";
-import CategoryList from "./categoryList";
+import ProductDisplay from "./product-display-component";
+import CategoryList from "./category-list-component";
 /*eslint-enable no-unused-vars*/
 import {connect} from "react-redux";
 

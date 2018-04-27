@@ -2,7 +2,7 @@ import "./header.css";
 /*eslint-disable no-unused-vars*/
 //They are used in jsx
 import React from "react";
-import LogIn from "./LogIn";
+import LogIn from "./login-component";
 /*eslint-enable no-unused-vars*/
 
 

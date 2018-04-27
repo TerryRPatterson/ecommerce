@@ -1,4 +1,4 @@
-import cartReducer from "./cartReducer";
+import cartReducer from "./cart-reducer";
 let router = {
     "fetch/":null,
     "cart/":cartReducer,
@@ -8,10 +8,10 @@ let router = {
 
 let initalState = {
     cart:[
-        {id:1,quantity:1},{id:2,quantity:3}
+        {id:1,quantity:10},{id:2,quantity:3}
     ],
     products:[
-        { "id": 1, "name": "Coffee Maker", "categoryId": 2, price:10 },
+        { "id": 1, "name": "Coffee Maker", "categoryId": 2, price:10,},
         { "id": 2, "name": "Redux Help", "categoryId": 3 , price:10},
         { "id": 3, "name": "Super Amazing Computer", "categoryId": 1, price:10 },
         { "id": 4, "name": "Werewolf", "categoryId": 4 , price:10}
@@ -22,7 +22,7 @@ let initalState = {
         { "id": 3, "name": "Educational" },
         { "id": 4, "name": "Board Games"}
     ],
-    currentUser:{ "id": 1, "name": "Terry" },
+    currentUser:null,
 };
 let reducer = (oldState=initalState, action) => {
     let type = action["type"];

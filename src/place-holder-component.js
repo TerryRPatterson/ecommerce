@@ -5,7 +5,8 @@ import React from "react";
 
 let placeholder = ({text}) => {
     return (
-        <svg width="130" height="60">
+        <svg width="130" height="60" role="img" aria-label="Placeholder image">
+            <title>Placeholder Image</title>
             <g>
                 <title>Layer 1</title>
                 <text xmlSpace="preserve" textAnchor="middle"

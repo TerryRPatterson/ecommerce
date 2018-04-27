@@ -3,20 +3,26 @@
 //They are used in jsx
 import React from "react";
 import {Link} from "react-router-dom";
-import Cart from "./cart";
+import Cart from "./cart-component";
 /*eslint-enable no-unused-vars*/
 import {connect} from "react-redux";
+import cartTotal from "./cart-total";
 
 let mapStateToProps = ({cart, currentUser}) => {
     return {cart, currentUser};
 };
 
 let login = ({currentUser, cart}) => {
-    if (currentUser !== undefined) {
+    let {currentTotal, pendingTotal} = cartTotal(cart);
+    let numberOfItems = `${currentTotal}`;
+    if (pendingTotal > 0) {
+        numberOfItems = numberOfItems + `(${pendingTotal})`;
+    }
+    if (currentUser) {
         return(
             <p>
                 Logged In As:{currentUser["name"]}
-                <Cart numberOfItems={cart.length}/>
+                <Cart numberOfItems={numberOfItems}/>
             </p>
         );
     }

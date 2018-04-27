@@ -31,11 +31,11 @@ let cart = ({numberOfItems}) => {
                     transform={"rotate(5.940036296844482 28.67837142944336,"+
                     "41.32098388671874) "}/>
                 <text stroke="#000000"
-                    transform={"matrix(3.4001467864316055,0,0,"+
-                    "1.8126544359282235,-110.03865284219664,-8.62110567074534)"}
+                    // transform={"matrix(3.4001467864316055,0,0,"+
+                    // "1.8126544359282235,-110.03865284219664,-8.62110567074534)"}
                     xmlSpace="preserve" textAnchor="middle"
-                    fontFamily="Fantasy" fontSize="24" id="svg_1"
-                    y="31.239245" x="50.151818" strokeWidth="0"
+                    fontFamily="Fantasy" fontSize="1em" id="svg_1"
+                    y="50%" x="50%"
                     fill="#000000">{numberOfItems}</text>
             </g>
         </svg>

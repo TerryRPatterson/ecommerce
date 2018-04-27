@@ -1,7 +1,7 @@
 /*eslint-disable no-unused-vars*/
 //They are used in jsx
 import React from "react";
-import Placeholder from "./placeHolder";
+import Placeholder from "./place-holder-component";
 import {Link} from "react-router-dom";
 /*eslint-enable no-unused-vars*/
 import {connect} from "react-redux";
@@ -39,7 +39,10 @@ let product = ({category,categoryId, price=defaultPrice, name, min=0, max=100,
                 <Placeholder text="Image Gallery"/>
                 <div>
                     <input type="number" min={min} max={max}
-                        placeholder="Quantity" disabled={!available}/>
+                        placeholder="Quantity" disabled={!available}
+                    onChange={ (event) => {
+                        
+                    }}/>
                     <button type="button" disabled={!available}>
                         Add to Cart</button>
                     {price}
